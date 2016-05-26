@@ -1,7 +1,12 @@
 def main():
-    spiralWidth = input("Enter spiral width: ")
-    drawSpiral(spiralWidth)
-    main()
+    while True:
+        spiralWidth = input("Enter spiral width: ")
+        if(spiralWidth.isdigit() == True):
+            drawSpiral(spiralWidth)
+        elif(spiralWidth[0].lower() == "q"):
+            exit()
+        else:
+            print("Please enter a positive integer")
 
 def drawSpiral(spiralWidth):
     spiralWidth = int(spiralWidth)
